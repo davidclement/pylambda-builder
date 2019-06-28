@@ -1,6 +1,6 @@
 # Python3.7 AWS Lambda Function Builder
 
-A Dockerfile for building python3.7 libraries on Amazon Linux for shipping with an AWS lambda function written in Python3.7
+A Dockerfile for building python libraries on Amazon Linux for shipping with an AWS lambda function written in Python3.7
 
 
 ## Problem
