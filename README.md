@@ -31,7 +31,7 @@ Build a Docker image that runs a script, `build.sh`, to
     pillow
     ```
     - NOTE: don't include libraries that Amazon already provides -- that will just make your function package unnecessarily large
-- create a subdirectory called `src`.  Put all your python code and non-architecture-specific libraries here.
+- create a subdirectory called `function_code`.  Put all your python code and non-architecture-specific libraries here.
 - directory structure might look like this:
 ```
 example-lambda-function/
