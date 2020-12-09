@@ -33,5 +33,4 @@ your-project-name/
 
 ### Build Your AWS Lambda Function Zip File
 - build: `./build_lambda.sh <your-project-name>`
-- inspect:
-- Inspect the output zip file `lambda-func.zip` w/ `zip --show-files lambda-func.zip`
+- inspect: `./inspect.sh <your-project-name>`
