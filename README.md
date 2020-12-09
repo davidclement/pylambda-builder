@@ -18,29 +18,20 @@ Build a Docker image that runs a script, `build.sh`, to
 
 ## Directions
 
-### Build the Docker Image
-
-`docker build -t <YOUR_IMAGE_TAG_HERE> .`
-
 ### Prepare Inputs to the Build Script
-- Make and change into a new directory anywhere on your system
-- create a file `pypackages.txt` that contains the architecture specific (or any other) python libraries you need to include in your lambda function. 
-    - just the name of each package, one per line and nothing else.  Example:
-    ```
-    >cat pypackages.txt 
-    pillow
-    ```
-    - NOTE: don't include libraries that Amazon already provides -- that will just make your function package unnecessarily large
+- Make and change into a new project directory named for your project
+- create a `requirements.txt` file specifying the extra pakcages (that you don't already get for free from aws)
 - create a subdirectory called `function_code`.  Put all your python code and non-architecture-specific libraries here.
 - directory structure might look like this:
 ```
-example-lambda-function/
+your-project-name/
 ├── README.md
 ├── function_code
 │   └── example.py
-└── pypackages.txt
+└── requirements.txt
 ```
 
 ### Build Your AWS Lambda Function Zip File
-- From the directory containing `pypackages.txt`, run the container: `docker run --rm -v $(pwd):/src <YOUR_IMAGE_TAG_HERE>`
+- build: `./build_lambda.sh <your-project-name>`
+- inspect:
 - Inspect the output zip file `lambda-func.zip` w/ `zip --show-files lambda-func.zip`
