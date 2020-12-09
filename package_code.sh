@@ -11,7 +11,9 @@ SRC_CODE_DIR=/src/function_code
 cp -r $SRC_CODE_DIR/* $INSTALL_DIR
 
 # install requirements
-pip3 install -r $REQUIREMENTS --target $INSTALL_DIR
+if test -f "$REQUIREMENTS"; then
+    pip3 install -r $REQUIREMENTS --target $INSTALL_DIR
+fi
 
 # cd into the install dir and zip everything up into the bind mounted dir for access on workstation
 cd $INSTALL_DIR && \

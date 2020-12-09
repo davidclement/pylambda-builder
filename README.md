@@ -19,7 +19,7 @@ Build a Docker image that runs a script, `build.sh`, to
 ## Directions
 
 ### Prepare Inputs to the Build Script
-- Make and change into a new project directory named for your project
+- Make and change into a new project directory named for your project, `<your-project-name>`
 - create a `requirements.txt` file specifying the extra pakcages (that you don't already get for free from aws)
 - create a subdirectory called `function_code`.  Put all your python code and non-architecture-specific libraries here.
 - directory structure might look like this:
