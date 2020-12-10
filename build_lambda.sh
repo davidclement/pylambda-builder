@@ -5,6 +5,10 @@
 PROJECT=$1
 IMAGE_TAG=pylambda-$PROJECT
 
+if test -f "$PROJECT/pre_build.sh"; then
+    $PROJECT/pre_build.sh $PROJECT
+fi
+
 echo "building image, project is $PROJECT, image tag is $IMAGE_TAG"
 docker build -t $IMAGE_TAG . && \
 
